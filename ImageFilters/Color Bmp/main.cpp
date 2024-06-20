@@ -515,8 +515,8 @@ void applyCropImage() {
     unsigned char croppedImage[SIZE][SIZE][RGB];
     WhiteImage(croppedImage);
 
-    for (int i = 0; i < l; ++i) {
-        for (int j = 0; j < w; ++j) {
+    for (int i = x; i < l; ++i) {
+        for (int j = y; j < w; ++j) {
             for (int k = 0; k < RGB; ++k) {
                 croppedImage[i][j][k] = image[x + i][y + j][k];
 
@@ -554,7 +554,6 @@ void applySkewImageRight() {
             for (int k = 0; k < RGB; ++k) {
                 resize_img[i][j + move][k] = image[i][j][k];
             }
-
         }
         // Adjust the horizontal shift (move) for each row to create the skew effect
         move = tan(Degree)*(256-i);
@@ -576,7 +575,7 @@ void applySkewImageUp() {
     // Implement skew image up
     // Implement skew image right
     system("cls");
-    cout<<"Please enter degree to skew right:";
+    cout<<"Please enter degree to skew up:";
     double Degree;
     cin >>Degree ;
     // Convert degree to radians and calculate the horizontal shift
@@ -584,10 +583,10 @@ void applySkewImageUp() {
     int move = tan(Degree)*256 ;    // Calculate the horizontal shift (move) to apply the specified skew degree
 
     // Initialize a temporary image for resizing
-    unsigned char resize_img[SIZE][SIZE+move][RGB];
+    unsigned char resize_img[SIZE+move][SIZE][RGB];
     // Initialize the additional space in the temporary image with white pixels
-    for (int i = 0; i < SIZE; ++i) {
-        for (int j = 0; j < SIZE+move; ++j) {
+    for (int i = 0; i < SIZE+move; ++i) {
+        for (int j = 0; j < SIZE; ++j) {
             for (int k = 0; k < RGB; ++k) {
                 resize_img[i][j][k] = 255;
             }
@@ -597,11 +596,12 @@ void applySkewImageUp() {
     for (int i = 0; i < SIZE; ++i) {
         for (int j = 0; j < SIZE; ++j) {
             for (int k = 0; k <RGB; ++k) {
-                resize_img[i][j + move][k] = image[i][j][k];
+                resize_img[i+move][j][k] = image[i][j][k];
             }
+            // Adjust the horizontal shift (move) for each row to create the skew effect
+            move = tan(Degree)*(256-j);
         }
-        // Adjust the horizontal shift (move) for each row to create the skew effect
-        move = tan(Degree)*(256-i);
+
     }
     // Resize the original image horizontally by applying the calculated shift
     for (int i = 0; i < SIZE; ++i) {
