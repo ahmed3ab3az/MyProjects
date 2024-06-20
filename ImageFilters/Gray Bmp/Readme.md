@@ -40,13 +40,13 @@ This project contains a collection of image processing functions implemented in 
 
 ## Screenshots Exmaples
 1. Black and White Filter:
-![BW](/Screenshots/BW.jpg)
+![BW](/ImageFilters/Gray Bmp/Screenshots/BW.jpg)
 2. Detect Edges :
-![Edges](/Screenshots/DetectEdge.jpg)
+![Edges](/ImageFilters/Gray Bmp/Screenshots/DetectEdge.jpg)
 3. Blur :
-![Blur](/Screenshots/Blur.jpg)
+![Blur](/ImageFilters/Gray Bmp/Screenshots/Blur.jpg)
 4. Skew Right :
-![Skew](/Screenshots/SkewRight.jpg)
+![Skew](/ImageFilters/Gray Bmp/Screenshots/SkewRight.jpg)
 
 
 
