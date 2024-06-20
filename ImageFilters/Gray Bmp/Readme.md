@@ -31,8 +31,8 @@ This project contains a collection of image processing functions implemented in 
 1. Clone the repository:
 
    ```bash
-   git clone <repository_url>
-   cd image-processing-project
+   git clone https://github.com/ahmed3ab3az/MyProjects/tree/main
+   cd ImageFilters
    
 2. Compile the source files:
    ```bash
