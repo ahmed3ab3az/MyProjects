@@ -87,29 +87,24 @@ void saveImage() {
 
 // Function to apply black and white filter
 void applyBlackWhiteFilter() {
-    int avg = 0;
-
-    // Calculate average pixel value
-    for (int i = 0; i < SIZE; i++) {
-        for (int j = 0; j < SIZE; j++) {
-            for (int k = 0; k < RGB; ++k) {
-                avg += image[i][j][k];
-            }
-
-        }
-    }
-    avg = avg / (SIZE * SIZE * RGB);  // Compute average
-
+    int avgRGB = 0 ;
     // Apply black and white filter based on average
-    for (int i = 0; i < SIZE; i++) {
-        for (int j = 0; j < SIZE; j++) {
+    for (int i = 0; i < SIZE; ++i) {
+        for (int j = 0; j < SIZE; ++j) {
+            avgRGB = 0;
             for (int k = 0; k < RGB; ++k) {
-                if (image[i][j][k] > avg)
-                    image[i][j][k] = 255;  // Set to white (255)
-                else
-                    image[i][j][k] = 0;    // Set to black (0)
+                avgRGB += image[i][j][k];
             }
-
+            avgRGB/=3;
+            if(avgRGB > 128){
+                for (int k = 0; k < RGB; ++k) {
+                    image[i][j][k] = 255;
+                }
+            }else {
+                for (int k = 0; k < RGB; ++k) {
+                    image[i][j][k] = 0;
+                }
+            }
         }
     }
 }
