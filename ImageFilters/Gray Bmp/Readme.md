@@ -37,18 +37,23 @@ This project contains a collection of image processing functions implemented in 
 2. Compile the source files:
    ```bash
    g++ -o main main.cpp image_processing.cpp -std=c++11
+## Screenshots Examples
 
-## Screenshots Exmaples
-1. Black and White Filter:
-![BW](/ImageFilters/Gray%20Bmp/Screenshots/BW.jpg)
-2. Detect Edges :
-![Edges](/ImageFilters/Gray%20Bmp/Screenshots/DetectEdge.jpg)
-3. Blur :
-![Blur](/ImageFilters/Gray%20Bmp/Screenshots/Blur.jpg)
-4. Skew Right :
-![Skew](/ImageFilters/Gray%20Bmp/Screenshots/SkewRight.jpg)
+1. **Black and White Filter:**
 
+   <img src="/ImageFilters/Gray%20Bmp/Screenshots/BW.jpg" alt="BW" width="400">
 
+2. **Detect Edges:**
+
+   <img src="/ImageFilters/Gray%20Bmp/Screenshots/DetectEdge.jpg" alt="Edges" width="400">
+
+3. **Blur:**
+
+   <img src="/ImageFilters/Gray%20Bmp/Screenshots/Blur.jpg" alt="Blur" width="400">
+
+4. **Skew Right:**
+
+   <img src="/ImageFilters/Gray%20Bmp/Screenshots/SkewRight.jpg" alt="Skew" width="400">
 
 ## Authors
 
