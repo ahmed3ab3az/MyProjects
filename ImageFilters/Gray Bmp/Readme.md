@@ -36,7 +36,7 @@ This project contains a collection of image processing functions implemented in 
    
 2. Compile the source files:
    ```bash
-   g++ -o main main.cpp image_processing.cpp -std=c++11
+   g++ -o main main.cpp main.cpp -std=c++11
 ## Screenshots Examples
 
 1. **Black and White Filter:**
